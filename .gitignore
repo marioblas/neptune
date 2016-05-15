@@ -1,0 +1,31 @@
+# Useful .gitignore templates:
+# https://github.com/github/gitignore
+
+# Linux
+*~
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# Sass
+.sass-cache
+*.css.map
+
+# Node & npm
+node_modules
+npm-debug.log
+
+# Project specific
+settings-production.json

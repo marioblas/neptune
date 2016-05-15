@@ -1,0 +1,3 @@
+.meteor
+node_modules
+**/*.min.js
