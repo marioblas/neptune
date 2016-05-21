@@ -21,3 +21,5 @@ reactive-dict
 check
 random
 kadira:flow-router
+kadira:debug
+meteorhacks:kadira
