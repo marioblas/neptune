@@ -1,3 +1,6 @@
+// Application Context is available to all actions and containers,
+// so this is the place for shared variables in your app
+
 import { Meteor } from 'meteor/meteor';
 import * as Collections from '/lib/collections';
 import { FlowRouter } from 'meteor/kadira:flow-router';

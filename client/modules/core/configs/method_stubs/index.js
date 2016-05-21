@@ -1,1 +1,3 @@
+// Import module method stubs and export from here...
+
 export default function () {}
