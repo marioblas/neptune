@@ -15,11 +15,11 @@ $ meteor npm start
 
 ## Commands
 
+> **Important**: prefix npm commands with **meteor** for avoid performance issues (eg: *meteor npm start*), read [this discussion](https://github.com/meteor/meteor/issues/4314).
+
 - `npm start` - start your meteor server with settings-development.json
 - `npm run lint -s` - lint all javascript files
 - `npm run lint:fix -s` - lint all javascript files and autofix problems
-
-> Important: prefix npm commands with meteor for avoid performance issues (eg: meteor npm start), read [this discussion](https://github.com/meteor/meteor/issues/4314).
 
 > Note that *-s* option is a shortcut for *--loglevel=silent* that makes the log output a little tidier and hides npm errors if the script exits with an error status (non-zero exit code).
 
