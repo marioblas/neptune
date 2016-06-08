@@ -1,1 +1,3 @@
+// Add initial data here...
+
 export default function () {}
