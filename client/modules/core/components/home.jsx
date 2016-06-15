@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './style.scss';
 
 const Home = () => (
-  <div className="home">
-    <h1>Welcome to Neptune!</h1>
+  <div className={styles.home}>
+    <h1 className={styles.greeting}>Welcome to Neptune!</h1>
   </div>
 );
 
