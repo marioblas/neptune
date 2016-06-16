@@ -15,6 +15,7 @@
     "react-mounter": "^1.2.0"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.6",
     "babel-core": "^6.9.1",
     "babel-plugin-react-require": "^2.1.0",
     "babel-polyfill": "^6.9.1",
@@ -33,7 +34,18 @@
     ],
     "ignorePaths": [
       "node_modules"
-    ]
+    ],
+    "postcssPlugins": {
+      "postcss-modules-values": {},
+      "postcss-modules-local-by-default": {},
+      "postcss-modules-extract-imports": {},
+      "postcss-modules-scope": {},
+      "autoprefixer": {
+        "browsers": [
+          "last 2 versions"
+        ]
+      }
+    }
   },
   "license": "MIT",
   "private": true
