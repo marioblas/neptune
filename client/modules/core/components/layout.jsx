@@ -13,4 +13,8 @@ const Layout = ({ content = () => null }) => (
   </div>
 );
 
+Layout.propTypes = {
+  content: React.PropTypes.func,
+};
+
 export default Layout;

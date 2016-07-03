@@ -6,4 +6,8 @@ const Footer = ({ currentYear }) => (
   </footer>
 );
 
+Footer.propTypes = {
+  currentYear: React.PropTypes.number.isRequired,
+};
+
 export default Footer;
