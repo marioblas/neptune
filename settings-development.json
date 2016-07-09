@@ -1,8 +1,13 @@
 {
   "public": {
-    "<key>": "<value>"
+    "appName": "Neptune",
+    "domain": "<domain>"
   },
-  "<private>": {
-    "<key>": "<value>"
+
+  "email": {
+    "address": "<address>",
+    "password": "<password>",
+    "host": "<smtp-host>",
+    "port": "<port>"
   }
 }

@@ -20,10 +20,11 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 reactive-dict
 check
 random
+email
+accounts-password
 kadira:flow-router
 kadira:debug
 meteorhacks:kadira
 aldeed:collection2
-accounts-password
 alanning:roles
 nathantreid:css-modules
