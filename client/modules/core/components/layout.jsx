@@ -1,10 +1,11 @@
 import React from 'react';
-
-import Header from './header.jsx';
-import Footer from '../containers/footer.jsx';
+import DocHead from './dochead';
+import Header from './header';
+import Footer from '../containers/footer';
 
 const Layout = ({ content = () => null }) => (
   <div className="app-container">
+    <DocHead />
     <Header />
     <div className="main-content">
       {content()}
