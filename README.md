@@ -9,7 +9,7 @@ Another Meteor boilerplate with Mantra, React, CSS Modules & more
 ## Quick start
 
 ```sh
-$ npm install
+$ meteor npm install
 $ meteor npm start
 ```
 
