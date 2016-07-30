@@ -3,6 +3,7 @@ import { mount } from 'react-mounter';
 
 import MainLayout from '/client/modules/core/components/layout';
 import Login from './containers/login';
+import Register from './containers/register';
 
 export default function (injectDeps, { FlowRouter }) {
   const MainLayoutCtx = injectDeps(MainLayout);
@@ -14,6 +15,15 @@ export default function (injectDeps, { FlowRouter }) {
     action() {
       mount(MainLayoutCtx, {
         content: () => (<Login />),
+      });
+    },
+  });
+
+  accountsRoutes.route('/register', {
+    name: 'register',
+    action() {
+      mount(MainLayoutCtx, {
+        content: () => (<Register />),
       });
     },
   });
