@@ -15,7 +15,7 @@ $ meteor npm start
 
 ## Commands
 
-> **Important**: prefix npm commands with **meteor** for avoid performance issues (eg: *meteor npm start*), read [this discussion](https://github.com/meteor/meteor/issues/4314).
+> **Important**: prefix npm commands with **meteor** for avoid performance & compatibility issues (eg: *meteor npm start*, read [this discussion](https://github.com/meteor/meteor/issues/4314)).
 
 - `npm start` - start your meteor server with settings-development.json
 - `npm run lint -s` - lint all javascript files
