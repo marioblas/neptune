@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 import publications from './publications';
 import methods from './methods';
 import configureEmail from './configs/email.js';
@@ -11,4 +12,7 @@ methods();
 configureEmail();
 configureChalk();
 addInitialData();
-addFakeData();
+
+if (Meteor.settings.public.appMode === 'dev') {
+  addFakeData();
+}
