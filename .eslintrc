@@ -7,6 +7,7 @@
 
   "rules": {
     "import/no-unresolved": [2, { ignore: ['^meteor/', '^/'] }],
+    "import/no-extraneous-dependencies": 0, // Disabled because of meteor/... imports
     "no-underscore-dangle": [2, { allow: ['_id', '_ensureIndex'] }]
   }
 }

@@ -20,6 +20,4 @@ const logger = {
   },
 };
 
-export {
-  logger,
-};
+export { logger as default };
