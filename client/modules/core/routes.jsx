@@ -3,7 +3,7 @@ import { mount } from 'react-mounter';
 
 import MainLayout from './components/layout';
 
-import Home from './components/home';
+import Home from './components/home.jsx';
 
 export default function (injectDeps, { FlowRouter }) {
   const MainLayoutCtx = injectDeps(MainLayout);
