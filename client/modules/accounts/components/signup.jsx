@@ -8,7 +8,7 @@ class SignUp extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const { signUpAction } = this.props;
+    const { signUp } = this.props;
     const { username, email, password } = this;
 
     const options = {
@@ -17,14 +17,14 @@ class SignUp extends React.Component {
       password: password.value,
     };
 
-    signUpAction(options);
+    signUp(options);
   }
 
   render() {
     const { error } = this.props;
 
     return (
-      <div className="register">
+      <div className="sign-up">
         <h2>Sign up</h2>
         {error ? <p>{error}</p> : null}
         <form onSubmit={this.handleSubmit}>
@@ -48,7 +48,7 @@ class SignUp extends React.Component {
 }
 
 SignUp.propTypes = {
-  signUpAction: React.PropTypes.func,
+  signUp: React.PropTypes.func,
   error: React.PropTypes.string,
 };
 

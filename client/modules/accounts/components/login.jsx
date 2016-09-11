@@ -8,10 +8,10 @@ class Login extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const { logInAction } = this.props;
+    const { logIn } = this.props;
     const { identifier, password } = this;
 
-    logInAction(identifier.value, password.value);
+    logIn(identifier.value, password.value);
   }
 
   render() {
@@ -38,7 +38,7 @@ class Login extends React.Component {
 }
 
 Login.propTypes = {
-  logInAction: React.PropTypes.func,
+  logIn: React.PropTypes.func,
   error: React.PropTypes.string,
 };
 

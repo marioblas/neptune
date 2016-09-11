@@ -12,8 +12,8 @@ export const composer = ({ context, clearErrors }, onData) => {
 
 export const depsMapper = (context, actions) => ({
   context: () => context,
-  signUpAction: actions.signup.signUp,
-  clearErrors: actions.signup.clearErrors,
+  signUp: actions.signUp.signUp,
+  clearErrors: actions.signUp.clearErrors,
 });
 
 export default composeAll(

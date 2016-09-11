@@ -20,7 +20,7 @@ export default function (injectDeps, { FlowRouter }) {
   });
 
   accountsRoutes.route('/signup', {
-    name: 'signup',
+    name: 'signUp',
     action() {
       mount(MainLayoutCtx, {
         content: () => (<SignUp />),
