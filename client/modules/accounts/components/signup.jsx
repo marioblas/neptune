@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Register extends React.Component {
+class SignUp extends React.Component {
   constructor() {
     super();
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -8,8 +8,8 @@ class Register extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const { registerAction } = this.props;
-    const { username, email, password } = this.refs;
+    const { signUpAction } = this.props;
+    const { username, email, password } = this;
 
     const options = {
       username: username.value,
@@ -17,7 +17,7 @@ class Register extends React.Component {
       password: password.value,
     };
 
-    registerAction(options);
+    signUpAction(options);
   }
 
   render() {
@@ -25,31 +25,31 @@ class Register extends React.Component {
 
     return (
       <div className="register">
-        <h2>Register</h2>
+        <h2>Sign up</h2>
         {error ? <p>{error}</p> : null}
         <form onSubmit={this.handleSubmit}>
-          <label>
+          <label htmlFor="username">
             <span>Username</span>
-            <input ref="username" type="text" />
+            <input ref={node => { this.username = node; }} id="username" type="text" />
           </label>
-          <label>
+          <label htmlFor="email">
             <span>Email</span>
-            <input ref="email" type="text" />
+            <input ref={node => { this.email = node; }} id="email" type="text" />
           </label>
-          <label>
+          <label htmlFor="password">
             <span>Password</span>
-            <input ref="password" type="password" />
+            <input ref={node => { this.password = node; }} id="password" type="password" />
           </label>
-          <button type="submit">Register</button>
+          <button type="submit">Sign up</button>
         </form>
       </div>
     );
   }
 }
 
-Register.propTypes = {
-  registerAction: React.PropTypes.func,
+SignUp.propTypes = {
+  signUpAction: React.PropTypes.func,
   error: React.PropTypes.string,
 };
 
-export default Register;
+export default SignUp;

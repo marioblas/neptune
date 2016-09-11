@@ -8,10 +8,10 @@ class Login extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const { loginAction } = this.props;
-    const { identifier, password } = this.refs;
+    const { logInAction } = this.props;
+    const { identifier, password } = this;
 
-    loginAction(identifier.value, password.value);
+    logInAction(identifier.value, password.value);
   }
 
   render() {
@@ -22,15 +22,15 @@ class Login extends React.Component {
         <h2>Login</h2>
         {error ? <p>{error}</p> : null}
         <form onSubmit={this.handleSubmit}>
-          <label>
+          <label htmlFor="identifier">
             <span>Username or email</span>
-            <input ref="identifier" type="text" />
+            <input ref={node => { this.identifier = node; }} id="identifier" type="text" />
           </label>
-          <label>
+          <label htmlFor="password">
             <span>Password</span>
-            <input ref="password" type="password" />
+            <input ref={node => { this.password = node; }} id="password" type="password" />
           </label>
-          <button type="submit">Login</button>
+          <button type="submit">Log in</button>
         </form>
       </div>
     );
@@ -38,7 +38,7 @@ class Login extends React.Component {
 }
 
 Login.propTypes = {
-  loginAction: React.PropTypes.func,
+  logInAction: React.PropTypes.func,
   error: React.PropTypes.string,
 };
 

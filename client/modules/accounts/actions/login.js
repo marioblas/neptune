@@ -1,7 +1,7 @@
 /* eslint consistent-return: 0 */
 
 export default {
-  login({ Meteor, LocalState, FlowRouter }, identifier, password) {
+  logIn({ Meteor, LocalState, FlowRouter }, identifier, password) {
     if (!identifier || !password) {
       return LocalState.set('LOGIN_ERROR', 'username or email & password are required');
     }
