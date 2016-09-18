@@ -17,4 +17,7 @@ export default function () {
   Accounts.emailTemplates.verifyEmail.subject = () => `${appName}: Email verification`;
   Accounts.emailTemplates.verifyEmail.text = (user, url) =>
     `Welcome to ${appName}!\nPlease follow the link to complete the registration progress.\n${url}`;
+
+  Accounts.emailTemplates.resetPassword.subject = () => `${appName}: Reset password link`;
+  // @TODO Accounts.emailTemplates.resetPassword.text = (user, url) => ``;
 }
