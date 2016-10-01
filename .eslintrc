@@ -1,5 +1,12 @@
 {
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    "plugin:meteor/recommended"
+  ],
+
+  "plugins": [
+    "meteor"
+  ],
 
   "parserOptions": {
     "ecmaFeatures": {
@@ -8,8 +15,10 @@
   },
 
   "rules": {
-    "import/no-unresolved": [2, { ignore: ['^meteor/', '^/'] }],
+    "import/no-unresolved": [2, { "ignore": ["^meteor/", "^/"] }],
     "import/no-extraneous-dependencies": 0, // Disabled because of meteor/... imports
-    "no-underscore-dangle": [2, { allow: ['_id', '_ensureIndex'] }]
+    "import/extensions": 0, // Disabled because of meteor/... imports
+    "import/no-absolute-path": 0,
+    "no-underscore-dangle": [2, { "allow": ["_id", "_ensureIndex"] }]
   }
 }

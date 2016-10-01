@@ -1,6 +1,6 @@
 import { useDeps, composeWithTracker, composeAll } from 'mantra-core';
 
-import Footer from '../components/footer.jsx';
+import Footer from '../components/footer';
 
 export const composer = ({ context }, onData) => {
   const currentDate = new Date();
