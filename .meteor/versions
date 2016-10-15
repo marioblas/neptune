@@ -54,7 +54,7 @@ logging@1.1.15_1
 mdg:validation-error@0.5.1
 meteor@1.2.17_1
 meteor-base@1.0.4
-meteorhacks:kadira@2.30.0
+meteorhacks:kadira@2.30.2
 meteorhacks:meteorx@1.4.1
 minifier-css@1.2.14_1
 minifier-js@1.2.14_1
@@ -63,14 +63,14 @@ mobile-experience@1.0.4
 mobile-status-bar@1.0.12
 modules@0.7.6_1
 modules-runtime@0.7.6_1
-mongo@1.1.12_3
+mongo@1.1.12_5
 mongo-id@1.0.5
 mongo-livedata@1.0.12
 nathantreid:css-modules@2.2.2
 nathantreid:css-modules-import-path-helpers@0.1.4
 npm-bcrypt@0.9.1_1
-npm-mongo@1.5.50
-observe-sequence@1.0.12
+npm-mongo@2.2.10_1
+observe-sequence@1.0.13
 ordered-dict@1.0.8
 promise@0.8.7
 raix:eventemitter@0.1.3

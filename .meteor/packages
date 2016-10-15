@@ -21,6 +21,7 @@ shell-server@0.2.1            # Server-side component of the `meteor shell` comm
 reactive-dict@1.1.8
 check@1.2.3
 random@1.0.10
+browser-policy
 email@1.1.17_1
 accounts-password@1.3.0
 kadira:flow-router
@@ -29,4 +30,3 @@ meteorhacks:kadira
 aldeed:collection2
 alanning:roles
 nathantreid:css-modules
-browser-policy
