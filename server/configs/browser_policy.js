@@ -1,7 +1,8 @@
+import { Meteor } from 'meteor/meteor';
 import { BrowserPolicy } from 'meteor/browser-policy-common';
 
 /**
- * Protect our application from unwanted attacks
+ * Protect the application from unwanted attacks
  * @see https://github.com/meteor/meteor/blob/devel/packages/browser-policy/README.md
  * @see https://themeteorchef.com/snippets/using-the-browser-policy-package
  */
@@ -15,13 +16,9 @@ export default function () {
   // Allow all content types to be loaded from the current domain
   BrowserPolicy.content.allowSameOriginForAll();
 
-  const trustedServices = [
-    'fonts.googleapis.com',
-    'fonts.gstatic.com',
-    '*.google-analytics.com',
-  ];
-
-  trustedServices.forEach((trustedService) => {
-    BrowserPolicy.content.allowOriginForAll(trustedService);
+  // Allow trusted services
+  const allowedOrigins = Meteor.settings.browserPolicy.allowOriginForAll;
+  allowedOrigins.forEach((allowedOrigin) => {
+    BrowserPolicy.content.allowOriginForAll(allowedOrigin);
   });
 }

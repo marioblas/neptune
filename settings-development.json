@@ -10,5 +10,13 @@
     "password": "<password>",
     "host": "<smtp-host>",
     "port": "<port>"
+  },
+
+  "browserPolicy": {
+    "allowOriginForAll": [
+      "fonts.googleapis.com",
+      "fonts.gstatic.com",
+      "*.google-analytics.com"
+    ]
   }
 }
