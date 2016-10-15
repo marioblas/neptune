@@ -15,6 +15,6 @@ configureEmail();
 configureChalk();
 addInitialData();
 
-if (Meteor.settings.public.appMode === 'dev') {
+if (Meteor.settings.public.appMode === 'development') {
   addFakeData();
 }

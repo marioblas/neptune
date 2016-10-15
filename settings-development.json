@@ -1,6 +1,6 @@
 {
   "public": {
-    "appMode": "dev",
+    "appMode": "development",
     "appName": "Neptune",
     "domain": "<domain>"
   },
