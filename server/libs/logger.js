@@ -2,22 +2,20 @@
 
 import chalk from 'chalk';
 
-const logger = {
-  info(message) {
+export default class Logger {
+  static info(message) {
     console.log(chalk.blue(message));
-  },
+  }
 
-  success(message) {
+  static success(message) {
     console.log(chalk.green(message));
-  },
+  }
 
-  warning(message) {
+  static warning(message) {
     console.log(chalk.yellow(message));
-  },
+  }
 
-  error(message) {
+  static error(message) {
     console.log(chalk.red(message));
-  },
-};
-
-export { logger as default };
+  }
+}
