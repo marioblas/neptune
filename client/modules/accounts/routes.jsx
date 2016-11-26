@@ -59,6 +59,15 @@ export default function (injectDeps, { FlowRouter }) {
     },
   });
 
+  accountsRoutes.route('/enroll-account/:token', {
+    name: 'accounts.enrollAccount',
+    action({ token }) {
+      mount(MainLayoutCtx, {
+        content: () => (<SetPassword token={token} />),
+      });
+    },
+  });
+
   accountsRoutes.route('/change-password', {
     name: 'accounts.changePassword',
     action() {
