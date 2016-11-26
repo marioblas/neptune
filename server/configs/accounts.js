@@ -26,9 +26,9 @@ export default function () {
   Accounts.emailTemplates.resetPassword.text = (user, url) =>
     `Hello, you've requested a link to reset your password.\nPlease set a new password by following de link below.\n${url}`;
 
-  // Activate account
+  // Enroll account
   Accounts.urls.enrollAccount = token => Meteor.absoluteUrl(`enroll-account/${token}`);
-  Accounts.emailTemplates.enrollAccount.subject = () => `${appName}: Activate account`;
+  Accounts.emailTemplates.enrollAccount.subject = () => `${appName}: Enroll account`;
   Accounts.emailTemplates.enrollAccount.text = (user, url) =>
     `Welcome to ${appName}!\nPlease follow the link below to activate your account.\n${url}`;
 }
