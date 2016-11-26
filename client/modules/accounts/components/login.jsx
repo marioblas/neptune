@@ -43,7 +43,7 @@ class Login extends React.Component {
           <button type="submit">Log in</button>
         </form>
         <div>
-          <p>New to {appName}? <a href={signUpPath}>Create an account</a>.</p>
+          <p>New on {appName}? <a href={signUpPath}>Create an account</a>.</p>
         </div>
       </div>
     );
