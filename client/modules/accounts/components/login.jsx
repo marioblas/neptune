@@ -24,11 +24,21 @@ class Login extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="identifier">
             <span>Username or email</span>
-            <input ref={(node) => { this.identifier = node; }} id="identifier" type="text" />
+            <input
+              ref={(node) => { this.identifier = node; }}
+              id="identifier"
+              type="text"
+              required
+            />
           </label>
           <label htmlFor="password">
             <span>Password</span>
-            <input ref={(node) => { this.password = node; }} id="password" type="password" />
+            <input
+              ref={(node) => { this.password = node; }}
+              id="password"
+              type="password"
+              required
+            />
           </label>
           <button type="submit">Log in</button>
         </form>

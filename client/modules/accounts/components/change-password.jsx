@@ -32,6 +32,7 @@ class ChangePassword extends React.Component {
               ref={(node) => { this.oldPassword = node; }}
               id="oldPassword"
               type="password"
+              required
             />
           </label>
           <label htmlFor="newPassword">
@@ -40,6 +41,7 @@ class ChangePassword extends React.Component {
               ref={(node) => { this.newPassword = node; }}
               id="newPassword"
               type="password"
+              required
             />
           </label>
           <label htmlFor="confirmPassword">
@@ -48,6 +50,7 @@ class ChangePassword extends React.Component {
               ref={(node) => { this.confirmPassword = node; }}
               id="confirmPassword"
               type="password"
+              required
             />
           </label>
           <button className="button" type="submit">Change password</button>
