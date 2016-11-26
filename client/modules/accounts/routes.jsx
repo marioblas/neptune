@@ -5,6 +5,7 @@ import MainLayout from '/client/modules/core/components/layout';
 import Login from './containers/login';
 import SignUp from './containers/sign-up';
 import VerifyEmail from './containers/verify-email';
+import ForgotPassword from './containers/forgot-password';
 
 export default function (injectDeps, { FlowRouter }) {
   const MainLayoutCtx = injectDeps(MainLayout);
@@ -34,6 +35,15 @@ export default function (injectDeps, { FlowRouter }) {
     action({ token }) {
       mount(MainLayoutCtx, {
         content: () => (<VerifyEmail token={token} />),
+      });
+    },
+  });
+
+  accountsRoutes.route('/forgot-password', {
+    name: 'accounts.forgotPassword',
+    action() {
+      mount(MainLayoutCtx, {
+        content: () => (<ForgotPassword />),
       });
     },
   });
