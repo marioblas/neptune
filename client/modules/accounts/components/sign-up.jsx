@@ -34,7 +34,7 @@ class SignUp extends React.Component {
           </label>
           <label htmlFor="email">
             <span>Email</span>
-            <input ref={(node) => { this.email = node; }} id="email" type="text" />
+            <input ref={(node) => { this.email = node; }} id="email" type="email" />
           </label>
           <label htmlFor="password">
             <span>Password</span>

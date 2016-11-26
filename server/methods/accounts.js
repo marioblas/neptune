@@ -4,15 +4,15 @@ import { Accounts } from 'meteor/accounts-base';
 
 export default function () {
   Meteor.methods({
-    'accounts.sendPasswordRecoveryEmail': (email) => {
+    'accounts.sendResetPasswordEmail': (email) => {
       check(email, String);
 
       const user = Accounts.findUserByEmail(email);
 
       if (!user) {
         throw new Meteor.Error(
-          'accounts.sendPasswordRecoveryEmail.userNotFound',
-          `User account with email ${email} not found`
+          'accounts.sendResetPasswordEmail.userNotFound',
+          `User account with email ${email} not found`,
         );
       }
 

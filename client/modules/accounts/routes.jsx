@@ -3,8 +3,7 @@ import { mount } from 'react-mounter';
 
 import MainLayout from '/client/modules/core/components/layout';
 import Login from './containers/login';
-import SignUp from './containers/signup';
-import PasswordRecovery from './containers/password_recovery';
+import SignUp from './containers/sign-up';
 
 export default function (injectDeps, { FlowRouter }) {
   const MainLayoutCtx = injectDeps(MainLayout);
@@ -12,7 +11,7 @@ export default function (injectDeps, { FlowRouter }) {
   const accountsRoutes = FlowRouter.group({ name: 'accountsRoutes' });
 
   accountsRoutes.route('/login', {
-    name: 'login',
+    name: 'accounts.login',
     action() {
       mount(MainLayoutCtx, {
         content: () => (<Login />),
@@ -21,19 +20,10 @@ export default function (injectDeps, { FlowRouter }) {
   });
 
   accountsRoutes.route('/signup', {
-    name: 'signUp',
+    name: 'accounts.signUp',
     action() {
       mount(MainLayoutCtx, {
         content: () => (<SignUp />),
-      });
-    },
-  });
-
-  accountsRoutes.route('/password-recovery', {
-    name: 'passwordRecovery',
-    action() {
-      mount(MainLayoutCtx, {
-        content: () => (<PasswordRecovery />),
       });
     },
   });

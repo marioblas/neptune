@@ -4,19 +4,19 @@ export default {
   signUp({ Meteor, LocalState, FlowRouter, Accounts }, options) {
     const { username, email, password } = options;
     if (!username || !email || !password) {
-      return LocalState.set('SIGNUP_ERROR', 'username, email and password are required');
+      return LocalState.set('SIGN_UP_ERROR', 'username, email and password are required');
     }
 
-    LocalState.set('SIGNUP_ERROR', null);
+    LocalState.set('SIGN_UP_ERROR', null);
 
     Accounts.createUser({ username, email, password }, (error) => {
       if (error) {
-        return LocalState.set('SIGNUP_ERROR', error.reason);
+        return LocalState.set('SIGN_UP_ERROR', error.reason);
       }
     });
   },
 
   clearErrors({ LocalState }) {
-    return LocalState.set('SIGNUP_ERROR', null);
+    return LocalState.set('SIGN_UP_ERROR', null);
   },
 };
