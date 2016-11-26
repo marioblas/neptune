@@ -20,14 +20,12 @@ class ChangePassword extends React.Component {
     return (
       <div className="change-password">
         <h2>Change password</h2>
+        {/* Error */}
+        {!success && error && <p>{error}</p>}
+        {/* Success */}
+        {success && <p>{success}</p>}
+        {/* Form */}
         <form onSubmit={this.handleSubmit}>
-
-          {/* Success */}
-          {success && <p>{success}</p>}
-
-          {/* Error */}
-          {!success && error && <p>{error}</p>}
-
           <label htmlFor="oldPassword">
             <span>Old password</span>
             <input
