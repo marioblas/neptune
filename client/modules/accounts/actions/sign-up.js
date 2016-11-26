@@ -4,7 +4,7 @@ export default {
   signUp({ Meteor, LocalState, FlowRouter, Accounts }, options) {
     const { username, email, password } = options;
     if (!username || !email || !password) {
-      return LocalState.set('SIGN_UP_ERROR', 'username, email and password are required');
+      return LocalState.set('SIGN_UP_ERROR', 'username, email and password are required.');
     }
 
     LocalState.set('SIGN_UP_ERROR', null);

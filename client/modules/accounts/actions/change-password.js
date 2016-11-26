@@ -3,7 +3,7 @@
 export default {
   changePassword({ LocalState, Accounts }, oldPassword, newPassword, confirmPassword) {
     if (newPassword !== confirmPassword) {
-      return LocalState.set('CHANGE_PASSWORD_ERROR', 'New passwords do not match');
+      return LocalState.set('CHANGE_PASSWORD_ERROR', 'New passwords do not match.');
     }
 
     Accounts.changePassword(oldPassword, newPassword, (error) => {
