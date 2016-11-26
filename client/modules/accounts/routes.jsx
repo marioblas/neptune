@@ -7,6 +7,7 @@ import SignUp from './containers/sign-up';
 import VerifyEmail from './containers/verify-email';
 import ForgotPassword from './containers/forgot-password';
 import SetPassword from './containers/set-password';
+import ChangePassword from './containers/change-password';
 
 export default function (injectDeps, { FlowRouter }) {
   const MainLayoutCtx = injectDeps(MainLayout);
@@ -22,7 +23,7 @@ export default function (injectDeps, { FlowRouter }) {
     },
   });
 
-  accountsRoutes.route('/signup', {
+  accountsRoutes.route('/sign-up', {
     name: 'accounts.signUp',
     action() {
       mount(MainLayoutCtx, {
@@ -54,6 +55,15 @@ export default function (injectDeps, { FlowRouter }) {
     action({ token }) {
       mount(MainLayoutCtx, {
         content: () => (<SetPassword token={token} />),
+      });
+    },
+  });
+
+  accountsRoutes.route('/change-password', {
+    name: 'accounts.changePassword',
+    action() {
+      mount(MainLayoutCtx, {
+        content: () => (<ChangePassword />),
       });
     },
   });

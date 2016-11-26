@@ -15,7 +15,7 @@ class ForgotPassword extends React.Component {
   }
 
   render() {
-    const { success, error } = this.props;
+    const { error, success } = this.props;
 
     return (
       <div className="forgot-password">

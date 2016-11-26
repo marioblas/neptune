@@ -1,6 +1,6 @@
 import React from 'react';
 
-const VerifyEmail = ({ success, error, successLink }) => (
+const VerifyEmail = ({ error, success, successLink }) => (
   <div className="verify-email">
     <h2>Verify email</h2>
     {/* Loading... */}
