@@ -26,7 +26,9 @@ class SignUp extends React.Component {
     return (
       <div className="sign-up">
         <h2>Sign up</h2>
-        {error ? <p>{error}</p> : null}
+        {/* Error */}
+        {error && <p>{error}</p>}
+        {/* Form */}
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="username">
             <span>Username</span>

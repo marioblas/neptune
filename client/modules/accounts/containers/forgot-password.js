@@ -2,10 +2,11 @@ import { useDeps, composeWithTracker, composeAll } from 'mantra-core';
 import ForgotPassword from '../components/forgot-password';
 
 export const composer = ({ context, clearErrors }, onData) => {
-  const { LocalState } = context();
+  const { FlowRouter, LocalState } = context();
   const error = LocalState.get('FORGOT_PASSWORD_ERROR');
   const success = LocalState.get('FORGOT_PASSWORD_SUCCESS');
-  onData(null, { error, success });
+  const successLink = FlowRouter.path('accounts.login');
+  onData(null, { error, success, successLink });
 
   // Clear errors when unmounting the component
   return clearErrors;

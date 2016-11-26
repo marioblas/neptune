@@ -20,7 +20,9 @@ class Login extends React.Component {
     return (
       <div className="login">
         <h2>Login</h2>
-        {error ? <p>{error}</p> : null}
+        {/* Error */}
+        {error && <p>{error}</p>}
+        {/* Form */}
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="identifier">
             <span>Username or email</span>
