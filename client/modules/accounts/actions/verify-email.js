@@ -4,7 +4,7 @@ export default {
       if (error) {
         return LocalState.set('VERIFY_EMAIL_ERROR', error.reason);
       }
-      return LocalState.set('VERIFY_EMAIL_SUCCESS', 'Your email has been verified!');
+      return LocalState.set('VERIFY_EMAIL_SUCCESS', 'Your email has been verified.');
     });
   },
 
