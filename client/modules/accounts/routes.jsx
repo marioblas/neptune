@@ -8,6 +8,7 @@ import VerifyEmail from './containers/verify-email';
 import ForgotPassword from './containers/forgot-password';
 import SetPassword from './containers/set-password';
 import ChangePassword from './containers/change-password';
+import Profile from './containers/profile';
 
 export default function (injectDeps, { FlowRouter }) {
   const MainLayoutCtx = injectDeps(MainLayout);
@@ -73,6 +74,15 @@ export default function (injectDeps, { FlowRouter }) {
     action() {
       mount(MainLayoutCtx, {
         content: () => (<ChangePassword />),
+      });
+    },
+  });
+
+  accountsRoutes.route('/profile', {
+    name: 'accounts.profile',
+    action() {
+      mount(MainLayoutCtx, {
+        content: () => (<Profile />),
       });
     },
   });
