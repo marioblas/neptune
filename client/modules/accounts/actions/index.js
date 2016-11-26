@@ -2,7 +2,7 @@ import login from './login';
 import signUp from './sign-up';
 import verifyEmail from './verify-email';
 import forgotPassword from './forgot-password';
-import setPassword from './set-password';
+import resetPassword from './reset-password';
 import changePassword from './change-password';
 
 export default {
@@ -10,6 +10,6 @@ export default {
   signUp,
   verifyEmail,
   forgotPassword,
-  setPassword,
+  resetPassword,
   changePassword,
 };

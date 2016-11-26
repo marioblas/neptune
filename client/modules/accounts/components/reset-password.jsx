@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SetPassword extends React.Component {
+class ResetPassword extends React.Component {
   constructor() {
     super();
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -8,10 +8,10 @@ class SetPassword extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const { setPassword, token } = this.props;
+    const { resetPassword, token } = this.props;
     const { newPassword, confirmPassword } = this;
 
-    setPassword(token, newPassword.value, confirmPassword.value);
+    resetPassword(token, newPassword.value, confirmPassword.value);
   }
 
   render() {
@@ -56,12 +56,12 @@ class SetPassword extends React.Component {
   }
 }
 
-SetPassword.propTypes = {
-  setPassword: React.PropTypes.func,
+ResetPassword.propTypes = {
+  resetPassword: React.PropTypes.func,
   token: React.PropTypes.string,
   error: React.PropTypes.string,
   success: React.PropTypes.string,
   successLink: React.PropTypes.string,
 };
 
-export default SetPassword;
+export default ResetPassword;

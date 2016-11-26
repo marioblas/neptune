@@ -1,5 +1,5 @@
 import { useDeps, composeWithTracker, composeAll } from 'mantra-core';
-import SetPassword from '../components/set-password';
+import ResetPassword from '../components/reset-password';
 
 export const composer = ({ context, clearErrors, token }, onData) => {
   const { FlowRouter, LocalState } = context();
@@ -14,11 +14,11 @@ export const composer = ({ context, clearErrors, token }, onData) => {
 
 export const depsMapper = (context, actions) => ({
   context: () => context,
-  setPassword: actions.setPassword.setPassword,
-  clearErrors: actions.setPassword.clearErrors,
+  resetPassword: actions.resetPassword.resetPassword,
+  clearErrors: actions.resetPassword.clearErrors,
 });
 
 export default composeAll(
   composeWithTracker(composer),
   useDeps(depsMapper),
-)(SetPassword);
+)(ResetPassword);

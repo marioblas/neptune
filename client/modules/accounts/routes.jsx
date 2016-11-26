@@ -6,7 +6,7 @@ import Login from './containers/login';
 import SignUp from './containers/sign-up';
 import VerifyEmail from './containers/verify-email';
 import ForgotPassword from './containers/forgot-password';
-import SetPassword from './containers/set-password';
+import ResetPassword from './containers/reset-password';
 import ChangePassword from './containers/change-password';
 import Profile from './containers/profile';
 
@@ -55,7 +55,7 @@ export default function (injectDeps, { FlowRouter }) {
     name: 'accounts.resetPassword',
     action({ token }) {
       mount(MainLayoutCtx, {
-        content: () => (<SetPassword token={token} />),
+        content: () => (<ResetPassword token={token} />),
       });
     },
   });
@@ -64,7 +64,7 @@ export default function (injectDeps, { FlowRouter }) {
     name: 'accounts.enrollAccount',
     action({ token }) {
       mount(MainLayoutCtx, {
-        content: () => (<SetPassword token={token} />),
+        content: () => (<ResetPassword token={token} />),
       });
     },
   });
