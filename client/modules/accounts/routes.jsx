@@ -10,7 +10,7 @@ import ResetPassword from './containers/reset-password';
 import ChangePassword from './containers/change-password';
 import Profile from './containers/profile';
 
-export default function (injectDeps, { FlowRouter }) {
+export default function (injectDeps, { FlowRouter, Meteor }) {
   const MainLayoutCtx = injectDeps(MainLayout);
 
   const accountsRoutes = FlowRouter.group({ name: 'accountsRoutes' });
@@ -39,6 +39,13 @@ export default function (injectDeps, { FlowRouter }) {
       mount(MainLayoutCtx, {
         content: () => (<VerifyEmail token={token} />),
       });
+    },
+  });
+
+  accountsRoutes.route('/log-out', {
+    name: 'accounts.logOut',
+    action() {
+      Meteor.logout(() => FlowRouter.go('accounts.login'));
     },
   });
 
