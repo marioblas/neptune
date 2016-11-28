@@ -53,7 +53,7 @@ class ChangePassword extends React.Component {
               required
             />
           </label>
-          <button className="button" type="submit">Change password</button>
+          <button type="submit">Change password</button>
         </form>
       </div>
     );
