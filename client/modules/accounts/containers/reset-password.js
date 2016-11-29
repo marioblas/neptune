@@ -3,8 +3,8 @@ import ResetPassword from '../components/reset-password';
 
 export const composer = ({ context, clearErrors, token }, onData) => {
   const { FlowRouter, LocalState } = context();
-  const error = LocalState.get('SET_PASSWORD_ERROR');
-  const success = LocalState.get('SET_PASSWORD_SUCCESS');
+  const error = LocalState.get('RESET_PASSWORD_ERROR');
+  const success = LocalState.get('RESET_PASSWORD_SUCCESS');
   const successLink = FlowRouter.path('accounts.profile');
   onData(null, { token, error, success, successLink });
 
