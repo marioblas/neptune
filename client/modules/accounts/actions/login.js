@@ -12,7 +12,6 @@ export default {
       if (error) {
         return LocalState.set('LOGIN_ERROR', error.reason);
       }
-      FlowRouter.go('home');
     });
   },
 

@@ -19,7 +19,7 @@ export default function (injectDeps, { FlowRouter, Meteor }) {
     name: 'accounts.login',
     action() {
       mount(MainLayoutCtx, {
-        content: () => (<Login />),
+        content: () => (<Login loggedInRoute="accounts.profile" />),
       });
     },
   });

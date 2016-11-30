@@ -1,4 +1,5 @@
 import React from 'react';
+import AuthEnsureGuest from '../containers/auth-ensure-guest';
 
 class ForgotPassword extends React.Component {
   constructor() {
@@ -18,26 +19,28 @@ class ForgotPassword extends React.Component {
     const { error, success, successLink } = this.props;
 
     return (
-      <div className="forgot-password">
-        <h2>Forgot password</h2>
-        {/* Error */}
-        {!success && error && <p>{error}</p>}
-        {/* Success or Form */}
-        {success ?
-          <div className="forgot-password-success">
-            <p>{success}</p>
-            <a href={successLink}>Return to login</a>
-          </div>
-          :
-          <form onSubmit={this.handleSubmit}>
-            <label htmlFor="email">
-              <span>Email</span>
-              <input ref={(node) => { this.email = node; }} id="email" type="email" required />
-            </label>
-            <button type="submit">Send reset link</button>
-          </form>
-        }
-      </div>
+      <AuthEnsureGuest>
+        <div className="forgot-password">
+          <h2>Forgot password</h2>
+          {/* Error */}
+          {!success && error && <p>{error}</p>}
+          {/* Success or Form */}
+          {success ?
+            <div className="forgot-password-success">
+              <p>{success}</p>
+              <a href={successLink}>Return to login</a>
+            </div>
+            :
+            <form onSubmit={this.handleSubmit}>
+              <label htmlFor="email">
+                <span>Email</span>
+                <input ref={(node) => { this.email = node; }} id="email" type="email" required />
+              </label>
+              <button type="submit">Send reset link</button>
+            </form>
+          }
+        </div>
+      </AuthEnsureGuest>
     );
   }
 }

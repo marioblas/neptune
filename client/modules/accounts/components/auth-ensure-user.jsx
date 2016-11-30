@@ -1,9 +1,10 @@
 import React from 'react';
+import Login from '../containers/login';
 
 const AuthEnsureUser = ({ loggingIn, loggedIn, children }) => (
   <div>
     {loggingIn && <div>Loading...</div>}
-    {!loggingIn && !loggedIn && <div>Please log in</div>}
+    {!loggingIn && !loggedIn && <Login />}
     {loggedIn && children}
   </div>
 );

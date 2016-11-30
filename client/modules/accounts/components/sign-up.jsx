@@ -1,4 +1,5 @@
 import React from 'react';
+import AuthEnsureGuest from '../containers/auth-ensure-guest';
 
 class SignUp extends React.Component {
   constructor() {
@@ -24,42 +25,44 @@ class SignUp extends React.Component {
     const { error } = this.props;
 
     return (
-      <div className="sign-up">
-        <h2>Sign up</h2>
-        {/* Error */}
-        {error && <p>{error}</p>}
-        {/* Form */}
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="username">
-            <span>Username</span>
-            <input
-              ref={(node) => { this.username = node; }}
-              id="username"
-              type="text"
-              required
-            />
-          </label>
-          <label htmlFor="email">
-            <span>Email</span>
-            <input
-              ref={(node) => { this.email = node; }}
-              id="email"
-              type="email"
-              required
-            />
-          </label>
-          <label htmlFor="password">
-            <span>Password</span>
-            <input
-              ref={(node) => { this.password = node; }}
-              id="password"
-              type="password"
-              required
-            />
-          </label>
-          <button type="submit">Sign up</button>
-        </form>
-      </div>
+      <AuthEnsureGuest>
+        <div className="sign-up">
+          <h2>Sign up</h2>
+          {/* Error */}
+          {error && <p>{error}</p>}
+          {/* Form */}
+          <form onSubmit={this.handleSubmit}>
+            <label htmlFor="username">
+              <span>Username</span>
+              <input
+                ref={(node) => { this.username = node; }}
+                id="username"
+                type="text"
+                required
+              />
+            </label>
+            <label htmlFor="email">
+              <span>Email</span>
+              <input
+                ref={(node) => { this.email = node; }}
+                id="email"
+                type="email"
+                required
+              />
+            </label>
+            <label htmlFor="password">
+              <span>Password</span>
+              <input
+                ref={(node) => { this.password = node; }}
+                id="password"
+                type="password"
+                required
+              />
+            </label>
+            <button type="submit">Sign up</button>
+          </form>
+        </div>
+      </AuthEnsureGuest>
     );
   }
 }
