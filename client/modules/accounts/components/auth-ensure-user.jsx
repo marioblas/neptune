@@ -12,7 +12,7 @@ const AuthEnsureUser = ({ loggingIn, loggedIn, children }) => (
 AuthEnsureUser.propTypes = {
   loggingIn: React.PropTypes.bool,
   loggedIn: React.PropTypes.bool,
-  children: React.PropTypes.element,
+  children: React.PropTypes.node,
 };
 
 export default AuthEnsureUser;
