@@ -1,12 +1,14 @@
 import React from 'react';
 
-const AuthEnsureGuest = ({ loggingIn, loggedIn, children }) => (
-  <div>
-    {loggingIn && <div>Loading...</div>}
-    {!loggingIn && loggedIn && <div>You are already logged in</div>}
-    {!loggedIn && children}
-  </div>
-);
+const AuthEnsureGuest = ({ loggingIn, loggedIn, children }) => {
+  if (loggingIn) {
+    return (<div>Loading...</div>);
+  }
+  if (loggedIn) {
+    return (<div>You are already logged in</div>);
+  }
+  return (<div>{children}</div>);
+};
 
 AuthEnsureGuest.propTypes = {
   loggingIn: React.PropTypes.bool,

@@ -5,16 +5,15 @@ const AuthEnsureRole = ({ loggingIn, loggedIn, allowed, silent, children }) => {
   if (loggingIn) {
     return (<div>Loading...</div>);
   }
-  if (!loggingIn && !loggedIn && !silent) {
+  if (!loggedIn && !silent) {
     return (<Login />);
   }
-  if (loggedIn && !allowed && !silent) {
+  if (!allowed && !silent) {
     return (<div>Access denied</div>);
   }
   if (allowed) {
     return (<div>{children}</div>);
   }
-
   return null;
 };
 
