@@ -15,7 +15,7 @@ export default {
     });
   },
 
-  clearErrors({ LocalState }) {
+  clearLocalStates({ LocalState }) {
     return LocalState.set('LOGIN_ERROR', null);
   },
 };

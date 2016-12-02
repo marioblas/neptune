@@ -8,7 +8,7 @@ export default {
     });
   },
 
-  clearErrors({ LocalState }) {
+  clearLocalStates({ LocalState }) {
     return [
       LocalState.set('VERIFY_EMAIL_ERROR', null),
       LocalState.set('VERIFY_EMAIL_SUCCESS', null),

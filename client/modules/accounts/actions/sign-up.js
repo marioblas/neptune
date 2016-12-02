@@ -16,7 +16,7 @@ export default {
     });
   },
 
-  clearErrors({ LocalState }) {
+  clearLocalStates({ LocalState }) {
     return LocalState.set('SIGN_UP_ERROR', null);
   },
 };

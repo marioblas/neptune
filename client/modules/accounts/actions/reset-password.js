@@ -17,7 +17,7 @@ export default {
     });
   },
 
-  clearErrors({ LocalState }) {
+  clearLocalStates({ LocalState }) {
     return [
       LocalState.set('RESET_PASSWORD_ERROR', null),
       LocalState.set('RESET_PASSWORD_SUCCESS', null),
