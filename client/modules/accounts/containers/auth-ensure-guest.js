@@ -5,7 +5,11 @@ import AuthEnsureGuest from '../components/auth-ensure-guest';
 const composer = ({ context, loggedIn, loggedInRoute }, onData) => {
   const { FlowRouter } = context();
   if (loggedIn && loggedInRoute) {
-    FlowRouter.go(loggedInRoute);
+    // Go to loggedInRoute without pollute the browser history in order to avoid loops
+    // when you hit the back button of the browser...
+    FlowRouter.withReplaceState(() => {
+      FlowRouter.go(loggedInRoute);
+    });
   }
   onData(null, {});
 };
