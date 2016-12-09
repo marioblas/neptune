@@ -3,7 +3,7 @@
 import React from 'react';
 import Login from '../containers/login';
 
-const AuthEnsureRole = ({ loggingIn, loggedIn, allowed, silent, loggingInComp, notLoggedInComp, notAllowedComp, children }) => {
+const AuthEnsureRole = ({ loggingIn, loggedIn, allowed, children, silent, loggingInComp, notLoggedInComp, notAllowedComp }) => {
   if (loggingIn) {
     return loggingInComp;
   }
@@ -21,13 +21,13 @@ const AuthEnsureRole = ({ loggingIn, loggedIn, allowed, silent, loggingInComp, n
 
 AuthEnsureRole.propTypes = {
   loggingIn: React.PropTypes.bool,
-  loggedIn: React.PropTypes.bool,
-  allowed: React.PropTypes.bool,
+  loggedIn: React.PropTypes.bool.isRequired,
+  allowed: React.PropTypes.bool.isRequired,
+  children: React.PropTypes.node.isRequired,
   silent: React.PropTypes.bool,
   loggingInComp: React.PropTypes.node,
   notLoggedInComp: React.PropTypes.node,
   notAllowedComp: React.PropTypes.node,
-  children: React.PropTypes.node,
 };
 
 AuthEnsureRole.defaultProps = {

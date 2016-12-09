@@ -1,7 +1,7 @@
 import React from 'react';
 import Login from '../containers/login';
 
-const AuthEnsureUser = ({ loggingIn, loggedIn, loggingInComp, notLoggedInComp, children }) => {
+const AuthEnsureUser = ({ loggingIn, loggedIn, children, loggingInComp, notLoggedInComp }) => {
   if (loggingIn) {
     return loggingInComp;
   }
@@ -13,10 +13,10 @@ const AuthEnsureUser = ({ loggingIn, loggedIn, loggingInComp, notLoggedInComp, c
 
 AuthEnsureUser.propTypes = {
   loggingIn: React.PropTypes.bool,
-  loggedIn: React.PropTypes.bool,
+  loggedIn: React.PropTypes.bool.isRequired,
+  children: React.PropTypes.node.isRequired,
   loggingInComp: React.PropTypes.node,
   notLoggedInComp: React.PropTypes.node,
-  children: React.PropTypes.node,
 };
 
 AuthEnsureUser.defaultProps = {
