@@ -22,7 +22,7 @@ class SignUp extends React.Component {
   }
 
   render() {
-    const { error } = this.props;
+    const { logInPath, error } = this.props;
 
     return (
       <AuthEnsureGuest>
@@ -61,6 +61,9 @@ class SignUp extends React.Component {
             </label>
             <button type="submit">Sign up</button>
           </form>
+          <div>
+            <p>Already signed up? <a href={logInPath}>Log in</a>.</p>
+          </div>
         </div>
       </AuthEnsureGuest>
     );
@@ -69,6 +72,7 @@ class SignUp extends React.Component {
 
 SignUp.propTypes = {
   signUp: React.PropTypes.func,
+  logInPath: React.PropTypes.string,
   error: React.PropTypes.string,
 };
 

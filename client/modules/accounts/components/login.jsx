@@ -16,7 +16,7 @@ class Login extends React.Component {
   }
 
   render() {
-    const { appName, signUpPath, loggedInRoute, error } = this.props;
+    const { signUpPath, forgotPasswordPath, loggedInRoute, error } = this.props;
 
     return (
       <AuthEnsureGuest loggedInRoute={loggedInRoute}>
@@ -43,11 +43,12 @@ class Login extends React.Component {
                 type="password"
                 required
               />
+              <a href={forgotPasswordPath}>Forgot password?</a>
             </label>
             <button type="submit">Log in</button>
           </form>
           <div>
-            <p>New on {appName}? <a href={signUpPath}>Create an account</a>.</p>
+            <p>Not signed up yet? <a href={signUpPath}>Create an account</a>.</p>
           </div>
         </div>
       </AuthEnsureGuest>
@@ -57,8 +58,8 @@ class Login extends React.Component {
 
 Login.propTypes = {
   logIn: React.PropTypes.func,
-  appName: React.PropTypes.string,
   signUpPath: React.PropTypes.string,
+  forgotPasswordPath: React.PropTypes.string,
   loggedInRoute: React.PropTypes.string,
   error: React.PropTypes.string,
 };

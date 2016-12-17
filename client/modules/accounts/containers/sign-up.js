@@ -2,9 +2,10 @@ import { useDeps, composeWithTracker, composeAll } from 'mantra-core';
 import SignUp from '../components/sign-up';
 
 export const composer = ({ context, clearLocalStates }, onData) => {
-  const { LocalState } = context();
+  const { FlowRouter, LocalState } = context();
+  const logInPath = FlowRouter.path('accounts.login');
   const error = LocalState.get('SIGN_UP_ERROR');
-  onData(null, { error });
+  onData(null, { logInPath, error });
 
   // Clear local states when unmounting the component
   return clearLocalStates;
