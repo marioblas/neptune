@@ -15,7 +15,7 @@ class ResetPassword extends React.Component {
   }
 
   render() {
-    const { error, success, successLink } = this.props;
+    const { error, success, successPath } = this.props;
 
     return (
       <div className="set-password">
@@ -26,7 +26,7 @@ class ResetPassword extends React.Component {
         {success ?
           <div className="set-password-success">
             <p>{success}</p>
-            <a href={successLink}>Continue</a>
+            <a href={successPath}>Continue</a>
           </div>
           :
           <form onSubmit={this.handleSubmit}>
@@ -61,7 +61,7 @@ ResetPassword.propTypes = {
   token: React.PropTypes.string,
   error: React.PropTypes.string,
   success: React.PropTypes.string,
-  successLink: React.PropTypes.string,
+  successPath: React.PropTypes.string,
 };
 
 export default ResetPassword;

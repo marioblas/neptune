@@ -16,7 +16,7 @@ class ForgotPassword extends React.Component {
   }
 
   render() {
-    const { error, success, successLink } = this.props;
+    const { error, success, successPath } = this.props;
 
     return (
       <AuthEnsureGuest>
@@ -28,7 +28,7 @@ class ForgotPassword extends React.Component {
           {success ?
             <div className="forgot-password-success">
               <p>{success}</p>
-              <a href={successLink}>Return to login</a>
+              <a href={successPath}>Return to login</a>
             </div>
             :
             <form onSubmit={this.handleSubmit}>
@@ -49,7 +49,7 @@ ForgotPassword.propTypes = {
   forgotPassword: React.PropTypes.func,
   error: React.PropTypes.string,
   success: React.PropTypes.string,
-  successLink: React.PropTypes.string,
+  successPath: React.PropTypes.string,
 };
 
 export default ForgotPassword;

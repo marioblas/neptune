@@ -1,6 +1,6 @@
 import React from 'react';
 
-const VerifyEmail = ({ error, success, successLink }) => (
+const VerifyEmail = ({ error, success, successPath }) => (
   <div className="verify-email">
     <h2>Verify email</h2>
     {/* Loading... */}
@@ -11,7 +11,7 @@ const VerifyEmail = ({ error, success, successLink }) => (
     {success &&
       <div className="verify-email-success">
         <p>{success}</p>
-        <a href={successLink}>Continue</a>
+        <a href={successPath}>Continue</a>
       </div>
     }
   </div>
@@ -20,7 +20,7 @@ const VerifyEmail = ({ error, success, successLink }) => (
 VerifyEmail.propTypes = {
   error: React.PropTypes.string,
   success: React.PropTypes.bool,
-  successLink: React.PropTypes.string,
+  successPath: React.PropTypes.string,
 };
 
 export default VerifyEmail;

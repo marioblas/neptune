@@ -6,8 +6,8 @@ export const composer = ({ context, clearLocalStates, verifyEmail, token }, onDa
   verifyEmail(token);
   const error = LocalState.get('VERIFY_EMAIL_ERROR');
   const success = LocalState.get('VERIFY_EMAIL_SUCCESS');
-  const successLink = FlowRouter.path('home');
-  onData(null, { error, success, successLink });
+  const successPath = FlowRouter.path('home');
+  onData(null, { error, success, successPath });
 
   // Clear local states when unmounting the component
   return clearLocalStates;

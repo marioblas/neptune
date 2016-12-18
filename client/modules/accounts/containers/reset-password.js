@@ -5,8 +5,8 @@ export const composer = ({ context, clearLocalStates, token }, onData) => {
   const { FlowRouter, LocalState } = context();
   const error = LocalState.get('RESET_PASSWORD_ERROR');
   const success = LocalState.get('RESET_PASSWORD_SUCCESS');
-  const successLink = FlowRouter.path('accounts.profile');
-  onData(null, { token, error, success, successLink });
+  const successPath = FlowRouter.path('accounts.profile');
+  onData(null, { token, error, success, successPath });
 
   // Clear local states when unmounting the component
   return clearLocalStates;
