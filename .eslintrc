@@ -19,6 +19,6 @@
     "import/no-extraneous-dependencies": 0, // Disabled because of meteor/... imports
     "import/extensions": 0, // Disabled because of meteor/... imports
     "import/no-absolute-path": 0,
-    "no-underscore-dangle": [2, { "allow": ["_id", "_ensureIndex"] }]
+    "no-underscore-dangle": [2, { "allow": ["_id"] }]
   }
 }
