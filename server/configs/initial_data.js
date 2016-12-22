@@ -1,4 +1,5 @@
 // Add initial data here...
+
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Accounts } from 'meteor/accounts-base';
@@ -20,7 +21,6 @@ export default function () {
 
   users.forEach(({ username, email, password, roles }) => {
     const userExists = Accounts.findUserByEmail(email);
-
     if (!userExists) {
       const userId = Accounts.createUser({ username, email, password });
       Meteor.users.update(userId, { $set: { 'emails.0.verified': true } });
