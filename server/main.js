@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import publications from './publications';
 import methods from './methods';
+import configureMongoIndexes from './configs/mongo_indexes';
 import configureBrowserPolicy from './configs/browser_policy';
 import configureEmail from './configs/email';
 import configureChalk from './configs/chalk';
@@ -11,6 +12,7 @@ import addFakeData from './configs/fake_data';
 publications();
 methods();
 
+configureMongoIndexes();
 configureBrowserPolicy();
 configureEmail();
 configureChalk();
