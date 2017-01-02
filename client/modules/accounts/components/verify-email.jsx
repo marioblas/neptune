@@ -19,7 +19,7 @@ const VerifyEmail = ({ error, success, successPath }) => (
 
 VerifyEmail.propTypes = {
   error: React.PropTypes.string,
-  success: React.PropTypes.bool,
+  success: React.PropTypes.string,
   successPath: React.PropTypes.string,
 };
 
