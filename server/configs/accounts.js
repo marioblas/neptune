@@ -6,11 +6,30 @@ export default function () {
     sendVerificationEmail: true,
   });
 
-  const appName = Meteor.settings.public.appName;
-  const emailAddress = Meteor.settings.email.address;
+  /**
+   * Validate login attempts
+   * @see https://docs.meteor.com/api/accounts-multi.html#AccountsServer-validateLoginAttempt
+   */
+  Accounts.validateLoginAttempt((attempt) => {
+    // If the login has failed, just return false.
+    if (!attempt.allowed) {
+      return false;
+    }
+
+    // Check the user's email is verified
+    // Note: if users may have multiple email addresses you'd need to do something more complex
+    if (attempt.user.emails[0].verified !== true) {
+      throw new Meteor.Error('email-not-verified', 'You must verify your email address');
+    }
+
+    return true;
+  });
 
   // Accounts email templates
   // http://docs.meteor.com/api/passwords.html#Accounts-emailTemplates
+  const appName = Meteor.settings.public.appName;
+  const emailAddress = Meteor.settings.email.address;
+
   Accounts.emailTemplates.siteName = appName;
   Accounts.emailTemplates.from = `${appName} <${emailAddress}>`;
 
