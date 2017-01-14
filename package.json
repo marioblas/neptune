@@ -1,6 +1,6 @@
 {
   "name": "neptune",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Neptune",
   "scripts": {
     "lint": "eslint ./client ./lib ./server --ext .js --ext .jsx",
