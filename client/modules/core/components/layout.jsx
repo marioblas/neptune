@@ -3,7 +3,7 @@ import DocHead from './dochead';
 import Header from './header';
 import Footer from '../containers/footer';
 
-const Layout = ({ content = () => null }) => (
+const Layout = ({ content }) => (
   <div className="app-container">
     <DocHead />
     <Header />
@@ -16,6 +16,10 @@ const Layout = ({ content = () => null }) => (
 
 Layout.propTypes = {
   content: React.PropTypes.func,
+};
+
+Layout.defaultProps = {
+  content: () => null,
 };
 
 export default Layout;

@@ -20,6 +20,7 @@ AuthEnsureUser.propTypes = {
 };
 
 AuthEnsureUser.defaultProps = {
+  loggingIn: false,
   loggingInComp: <div>Loading...</div>,
   notLoggedInComp: <Login />,
 };

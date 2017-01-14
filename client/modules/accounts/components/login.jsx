@@ -47,9 +47,12 @@ class Login extends React.Component {
             </label>
             <button type="submit">Log in</button>
           </form>
-          <div>
-            <p>Not signed up yet? <a href={signUpPath}>Create an account</a>.</p>
-          </div>
+
+          {signUpPath &&
+            <div>
+              <p>Not signed up yet? <a href={signUpPath}>Create an account</a>.</p>
+            </div>
+          }
         </div>
       </AuthEnsureGuest>
     );
@@ -57,11 +60,17 @@ class Login extends React.Component {
 }
 
 Login.propTypes = {
-  logIn: React.PropTypes.func,
+  logIn: React.PropTypes.func.isRequired,
+  forgotPasswordPath: React.PropTypes.string.isRequired,
   signUpPath: React.PropTypes.string,
-  forgotPasswordPath: React.PropTypes.string,
   loggedInRoute: React.PropTypes.string,
   error: React.PropTypes.string,
+};
+
+Login.defaultProps = {
+  signUpPath: '',
+  loggedInRoute: '',
+  error: '',
 };
 
 export default Login;

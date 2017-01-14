@@ -11,7 +11,7 @@ const VerifyEmail = ({ error, success, successPath }) => (
     {success &&
       <div className="verify-email-success">
         <p>{success}</p>
-        <a href={successPath}>Continue</a>
+        {successPath && <a href={successPath}>Continue</a>}
       </div>
     }
   </div>
@@ -21,6 +21,12 @@ VerifyEmail.propTypes = {
   error: React.PropTypes.string,
   success: React.PropTypes.string,
   successPath: React.PropTypes.string,
+};
+
+VerifyEmail.defaultProps = {
+  error: '',
+  success: '',
+  successPath: '',
 };
 
 export default VerifyEmail;

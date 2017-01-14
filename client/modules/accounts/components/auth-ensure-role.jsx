@@ -31,6 +31,8 @@ AuthEnsureRole.propTypes = {
 };
 
 AuthEnsureRole.defaultProps = {
+  loggingIn: false,
+  silent: false,
   loggingInComp: <div>Loading...</div>,
   notLoggedInComp: <Login />,
   notAllowedComp: <div>Access denied</div>,

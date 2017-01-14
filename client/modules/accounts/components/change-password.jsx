@@ -64,9 +64,14 @@ class ChangePassword extends React.Component {
 }
 
 ChangePassword.propTypes = {
-  changePassword: React.PropTypes.func,
+  changePassword: React.PropTypes.func.isRequired,
   error: React.PropTypes.string,
   success: React.PropTypes.string,
+};
+
+ChangePassword.defaultProps = {
+  error: '',
+  success: '',
 };
 
 export default ChangePassword;

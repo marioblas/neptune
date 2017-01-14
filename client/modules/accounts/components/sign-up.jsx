@@ -71,9 +71,13 @@ class SignUp extends React.Component {
 }
 
 SignUp.propTypes = {
-  signUp: React.PropTypes.func,
-  logInPath: React.PropTypes.string,
+  signUp: React.PropTypes.func.isRequired,
+  logInPath: React.PropTypes.string.isRequired,
   error: React.PropTypes.string,
+};
+
+SignUp.defaultProps = {
+  error: '',
 };
 
 export default SignUp;

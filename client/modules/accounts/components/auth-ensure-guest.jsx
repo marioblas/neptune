@@ -19,6 +19,7 @@ AuthEnsureGuest.propTypes = {
 };
 
 AuthEnsureGuest.defaultProps = {
+  loggingIn: false,
   loggingInComp: <div>Loading...</div>,
   loggedInComp: <div>You are already logged in</div>,
 };
