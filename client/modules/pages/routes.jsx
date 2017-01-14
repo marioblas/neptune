@@ -5,10 +5,14 @@ import MainLayout from '/client/modules/core/components/layout';
 import Home from './components/home.jsx';
 import Secrets from './components/secrets';
 
-export default function (injectDeps, { FlowRouter }) {
+export default function (injectDeps, { FlowRouter, GoogleAnalytics }) {
   const MainLayoutCtx = injectDeps(MainLayout);
 
-  FlowRouter.route('/', {
+  const publicRoutes = FlowRouter.group({
+    triggersEnter: [GoogleAnalytics.pageView],
+  });
+
+  publicRoutes.route('/', {
     name: 'home',
     action() {
       mount(MainLayoutCtx, {

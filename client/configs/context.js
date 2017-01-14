@@ -8,6 +8,7 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import { Tracker } from 'meteor/tracker';
 import { Accounts } from 'meteor/accounts-base';
 import { Roles } from 'meteor/alanning:roles';
+import GoogleAnalytics from '/client/modules/core/libs/google-analytics';
 
 export default function () {
   return {
@@ -18,5 +19,6 @@ export default function () {
     Tracker,
     Accounts,
     Roles,
+    GoogleAnalytics,
   };
 }

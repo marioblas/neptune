@@ -1,8 +1,12 @@
 {
   "public": {
     "appMode": "development",
+    "appDebug": false,
     "appName": "Neptune",
-    "domain": "<domain>"
+    "domain": "<domain>",
+    "google": {
+      "analyticsId": "UA-000000-01"
+    }
   },
 
   "email": {
@@ -14,8 +18,8 @@
 
   "browserPolicy": {
     "allowOriginForAll": [
-      "fonts.googleapis.com",
-      "fonts.gstatic.com",
+      "*.googleapis.com",
+      "*.gstatic.com",
       "*.google-analytics.com"
     ]
   }
