@@ -1,11 +1,11 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import styles from './home.scss';
+import H1 from '/client/ui/h1';
 
 const Home = () => (
-  <div className={styles.home}>
+  <div className="home">
     <Helmet title="Home" />
-    <h1 className={styles.greeting}>Welcome to Neptune</h1>
+    <H1>Welcome to Neptune</H1>
   </div>
 );
 

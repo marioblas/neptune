@@ -1,5 +1,9 @@
+// Sanitize CSS
+import 'sanitize.css/sanitize.css';
+
 import { createApp } from 'mantra-core';
 import initContext from './configs/context';
+import applyGlobalStyles from './configs/global-styles';
 import initGoogleAnalytics from './configs/google-analytics';
 
 // Modules
@@ -8,6 +12,7 @@ import accountsModule from './modules/accounts';
 import pagesModule from './modules/pages';
 
 // Configs
+applyGlobalStyles();
 initGoogleAnalytics();
 
 // Init context
