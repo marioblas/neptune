@@ -1,17 +1,19 @@
 import React from 'react';
+import App from './app';
 import DocHead from './dochead';
 import Header from './header';
+import MainContent from './main-content';
 import Footer from '../containers/footer';
 
 const Layout = ({ content }) => (
-  <div className="app-container">
+  <App>
     <DocHead />
     <Header />
-    <div className="main-content">
+    <MainContent>
       {content()}
-    </div>
+    </MainContent>
     <Footer />
-  </div>
+  </App>
 );
 
 Layout.propTypes = {
