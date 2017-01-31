@@ -22,8 +22,8 @@ const AuthEnsureRole = ({ loggingIn, loggedIn, allowed, children, silent, loggin
 AuthEnsureRole.propTypes = {
   loggingIn: React.PropTypes.bool,
   loggedIn: React.PropTypes.bool.isRequired,
-  allowed: React.PropTypes.bool.isRequired,
   children: React.PropTypes.node.isRequired,
+  allowed: React.PropTypes.bool,
   silent: React.PropTypes.bool,
   loggingInComp: React.PropTypes.node,
   notLoggedInComp: React.PropTypes.node,
@@ -32,6 +32,7 @@ AuthEnsureRole.propTypes = {
 
 AuthEnsureRole.defaultProps = {
   loggingIn: false,
+  allowed: undefined,
   silent: false,
   loggingInComp: <div>Loading...</div>,
   notLoggedInComp: <Login />,
