@@ -1,6 +1,6 @@
 /* eslint max-len: 0 */
 
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Login from '../containers/login';
 
 const AuthEnsureRole = ({ loggingIn, loggedIn, allowed, children, silent, loggingInComp, notLoggedInComp, notAllowedComp }) => {
@@ -20,14 +20,14 @@ const AuthEnsureRole = ({ loggingIn, loggedIn, allowed, children, silent, loggin
 };
 
 AuthEnsureRole.propTypes = {
-  loggingIn: React.PropTypes.bool,
-  loggedIn: React.PropTypes.bool.isRequired,
-  children: React.PropTypes.node.isRequired,
-  allowed: React.PropTypes.bool,
-  silent: React.PropTypes.bool,
-  loggingInComp: React.PropTypes.node,
-  notLoggedInComp: React.PropTypes.node,
-  notAllowedComp: React.PropTypes.node,
+  loggingIn: PropTypes.bool,
+  loggedIn: PropTypes.bool.isRequired,
+  children: PropTypes.node.isRequired,
+  allowed: PropTypes.bool,
+  silent: PropTypes.bool,
+  loggingInComp: PropTypes.node,
+  notLoggedInComp: PropTypes.node,
+  notAllowedComp: PropTypes.node,
 };
 
 AuthEnsureRole.defaultProps = {

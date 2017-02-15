@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import AuthEnsureUser from '../containers/auth-ensure-user';
 
 const Profile = ({ username, email }) => (
@@ -12,8 +12,8 @@ const Profile = ({ username, email }) => (
 );
 
 Profile.propTypes = {
-  email: React.PropTypes.string.isRequired,
-  username: React.PropTypes.string,
+  email: PropTypes.string.isRequired,
+  username: PropTypes.string,
 };
 
 Profile.defaultProps = {

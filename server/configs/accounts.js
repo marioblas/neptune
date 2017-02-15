@@ -2,6 +2,10 @@ import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 
 export default function () {
+  /**
+   * Configure global accounts options
+   * @see https://docs.meteor.com/api/accounts-multi.html#AccountsCommon-config
+   */
   Accounts.config({
     sendVerificationEmail: true,
   });
@@ -26,7 +30,7 @@ export default function () {
   });
 
   // Accounts email templates
-  // http://docs.meteor.com/api/passwords.html#Accounts-emailTemplates
+  // @see http://docs.meteor.com/api/passwords.html#Accounts-emailTemplates
   const appName = Meteor.settings.public.appName;
   const emailAddress = Meteor.settings.email.address;
 

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import AuthEnsureUser from '../containers/auth-ensure-user';
 
-class ChangePassword extends React.Component {
+class ChangePassword extends Component {
   constructor() {
     super();
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -64,9 +64,9 @@ class ChangePassword extends React.Component {
 }
 
 ChangePassword.propTypes = {
-  changePassword: React.PropTypes.func.isRequired,
-  error: React.PropTypes.string,
-  success: React.PropTypes.string,
+  changePassword: PropTypes.func.isRequired,
+  error: PropTypes.string,
+  success: PropTypes.string,
 };
 
 ChangePassword.defaultProps = {

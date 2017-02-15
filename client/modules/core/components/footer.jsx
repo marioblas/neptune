@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 const Footer = ({ currentYear }) => (
   <footer className="main-footer">
@@ -7,7 +7,7 @@ const Footer = ({ currentYear }) => (
 );
 
 Footer.propTypes = {
-  currentYear: React.PropTypes.number.isRequired,
+  currentYear: PropTypes.number.isRequired,
 };
 
 export default Footer;

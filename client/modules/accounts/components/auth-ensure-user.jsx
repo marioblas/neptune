@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Login from '../containers/login';
 
 const AuthEnsureUser = ({ loggingIn, loggedIn, children, loggingInComp, notLoggedInComp }) => {
@@ -12,11 +12,11 @@ const AuthEnsureUser = ({ loggingIn, loggedIn, children, loggingInComp, notLogge
 };
 
 AuthEnsureUser.propTypes = {
-  loggingIn: React.PropTypes.bool,
-  loggedIn: React.PropTypes.bool.isRequired,
-  children: React.PropTypes.node.isRequired,
-  loggingInComp: React.PropTypes.node,
-  notLoggedInComp: React.PropTypes.node,
+  loggingIn: PropTypes.bool,
+  loggedIn: PropTypes.bool.isRequired,
+  children: PropTypes.node.isRequired,
+  loggingInComp: PropTypes.node,
+  notLoggedInComp: PropTypes.node,
 };
 
 AuthEnsureUser.defaultProps = {

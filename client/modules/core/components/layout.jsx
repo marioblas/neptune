@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import App from './app';
 import DocHead from './dochead';
 import Header from './header';
@@ -17,7 +17,7 @@ const Layout = ({ content }) => (
 );
 
 Layout.propTypes = {
-  content: React.PropTypes.func,
+  content: PropTypes.func,
 };
 
 Layout.defaultProps = {

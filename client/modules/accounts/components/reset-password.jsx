@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 
-class ResetPassword extends React.Component {
+class ResetPassword extends Component {
   constructor() {
     super();
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -57,11 +57,11 @@ class ResetPassword extends React.Component {
 }
 
 ResetPassword.propTypes = {
-  resetPassword: React.PropTypes.func.isRequired,
-  token: React.PropTypes.string.isRequired,
-  error: React.PropTypes.string,
-  success: React.PropTypes.string,
-  successPath: React.PropTypes.string,
+  resetPassword: PropTypes.func.isRequired,
+  token: PropTypes.string.isRequired,
+  error: PropTypes.string,
+  success: PropTypes.string,
+  successPath: PropTypes.string,
 };
 
 ResetPassword.defaultProps = {

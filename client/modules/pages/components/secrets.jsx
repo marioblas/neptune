@@ -14,6 +14,4 @@ const Secrets = () => (
   </AuthEnsureRole>
 );
 
-Secrets.propTypes = {};
-
 export default Secrets;

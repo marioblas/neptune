@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 const VerifyEmail = ({ error, success, successPath }) => (
   <div className="verify-email">
@@ -18,9 +18,9 @@ const VerifyEmail = ({ error, success, successPath }) => (
 );
 
 VerifyEmail.propTypes = {
-  error: React.PropTypes.string,
-  success: React.PropTypes.string,
-  successPath: React.PropTypes.string,
+  error: PropTypes.string,
+  success: PropTypes.string,
+  successPath: PropTypes.string,
 };
 
 VerifyEmail.defaultProps = {

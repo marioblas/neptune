@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 const AuthEnsureGuest = ({ loggingIn, loggedIn, children, loggingInComp, loggedInComp }) => {
   if (loggingIn) {
@@ -11,11 +11,11 @@ const AuthEnsureGuest = ({ loggingIn, loggedIn, children, loggingInComp, loggedI
 };
 
 AuthEnsureGuest.propTypes = {
-  loggingIn: React.PropTypes.bool,
-  loggedIn: React.PropTypes.bool.isRequired,
-  children: React.PropTypes.node.isRequired,
-  loggingInComp: React.PropTypes.node,
-  loggedInComp: React.PropTypes.node,
+  loggingIn: PropTypes.bool,
+  loggedIn: PropTypes.bool.isRequired,
+  children: PropTypes.node.isRequired,
+  loggingInComp: PropTypes.node,
+  loggedInComp: PropTypes.node,
 };
 
 AuthEnsureGuest.defaultProps = {

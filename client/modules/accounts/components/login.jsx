@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import AuthEnsureGuest from '../containers/auth-ensure-guest';
 
-class Login extends React.Component {
+class Login extends Component {
   constructor() {
     super();
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -60,11 +60,11 @@ class Login extends React.Component {
 }
 
 Login.propTypes = {
-  logIn: React.PropTypes.func.isRequired,
-  forgotPasswordPath: React.PropTypes.string.isRequired,
-  signUpPath: React.PropTypes.string,
-  loggedInRoute: React.PropTypes.string,
-  error: React.PropTypes.string,
+  logIn: PropTypes.func.isRequired,
+  forgotPasswordPath: PropTypes.string.isRequired,
+  signUpPath: PropTypes.string,
+  loggedInRoute: PropTypes.string,
+  error: PropTypes.string,
 };
 
 Login.defaultProps = {
