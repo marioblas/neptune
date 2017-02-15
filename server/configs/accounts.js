@@ -11,6 +11,18 @@ export default function () {
   });
 
   /**
+   * Customize new user creation
+   * @see https://docs.meteor.com/api/accounts-multi.html#AccountsServer-onCreateUser
+   */
+  Accounts.onCreateUser((options, user) => {
+    // We still want the default hook's 'profile' behavior
+    if (options.profile) {
+      Object.assign(user, { profile: options.profile });
+    }
+    return user;
+  });
+
+  /**
    * Validate login attempts
    * @see https://docs.meteor.com/api/accounts-multi.html#AccountsServer-validateLoginAttempt
    */
