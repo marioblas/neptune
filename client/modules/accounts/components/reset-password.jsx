@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react';
+import Helmet from 'react-helmet';
+import H1 from '/client/ui/h1';
 
 class ResetPassword extends Component {
   constructor() {
@@ -19,7 +21,8 @@ class ResetPassword extends Component {
 
     return (
       <div className="set-password">
-        <h2>Set password</h2>
+        <Helmet title="Set password" />
+        <H1>Set password</H1>
         {/* Error */}
         {!success && error && <p>{error}</p>}
         {/* Success or Form */}

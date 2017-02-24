@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react';
+import Helmet from 'react-helmet';
+import H1 from '/client/ui/h1';
 import AuthEnsureUser from '../containers/auth-ensure-user';
 
 class ChangePassword extends Component {
@@ -21,7 +23,8 @@ class ChangePassword extends Component {
     return (
       <AuthEnsureUser>
         <div className="change-password">
-          <h2>Change password</h2>
+          <Helmet title="Change password" />
+          <H1>Change password</H1>
           {/* Error */}
           {!success && error && <p>{error}</p>}
           {/* Success */}
