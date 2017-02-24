@@ -4,13 +4,13 @@ import AuthEnsureRole from '../components/auth-ensure-role';
 
 const composer = ({ context, loggedIn, roles }, onData) => {
   const { Meteor, Roles } = context();
+  const data = {};
 
   if (loggedIn && roles) {
     const allowed = Roles.userIsInRole(Meteor.userId(), roles);
-    onData(null, { allowed });
-  } else {
-    onData(null, {});
+    Object.assign(data, { allowed });
   }
+  onData(null, data);
 };
 
 export const depsMapper = context => ({
