@@ -1,6 +1,6 @@
 import routes from './routes';
 import actions from './actions';
-import methodStubs from './configs/method_stubs';
+import methodStubs from './configs/method-stubs';
 
 export default {
   routes,
