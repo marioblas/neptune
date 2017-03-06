@@ -20,8 +20,8 @@
     "react-ga": "^2.1.2",
     "react-helmet": "^4.0.0",
     "react-mounter": "^1.2.0",
-    "sanitize.css": "^4.1.0",
-    "styled-components": "^1.4.3"
+    "sanitize.css": "^5.0.0",
+    "styled-components": "^1.4.4"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
