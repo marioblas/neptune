@@ -19,6 +19,7 @@
     "import/no-absolute-path": 0,
     "import/no-extraneous-dependencies": 0, // Disabled because of meteor/... imports
     "import/no-unresolved": [2, { "ignore": ["^meteor/", "^/"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "no-underscore-dangle": [2, { "allow": ["_id"] }],
     "object-shorthand": [2, "always", { "avoidQuotes": false }], // Improve DX for meteor methods and `this` keyword
   }

@@ -6,6 +6,7 @@ import A from '/client/ui/a';
 const StyledFooter = styled.footer`
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 `;
 
 const Footer = ({ currentYear }) => (

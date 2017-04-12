@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { tint } from 'polished';
 
 const A = styled.a`
-  color: #41addd;
+  color: ${props => props.theme.color.alternate};
   text-decoration: none;
 
   &:hover {
-    color: #6cc0e5;
+    color: ${props => tint(0.8, props.theme.color.alternate)};
   }
 `;
 
