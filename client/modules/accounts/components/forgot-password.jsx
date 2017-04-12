@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import H1 from '/client/ui/h1';
 import AuthEnsureGuest from '../containers/auth-ensure-guest';
@@ -23,7 +24,9 @@ class ForgotPassword extends Component {
     return (
       <AuthEnsureGuest>
         <div className="forgot-password">
-          <Helmet title="Forgot password" />
+          <Helmet>
+            <title>Forgot password</title>
+          </Helmet>
           <H1>Forgot password</H1>
           {/* Error */}
           {!success && error && <p>{error}</p>}

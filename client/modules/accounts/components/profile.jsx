@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import H1 from '/client/ui/h1';
 import AuthEnsureUser from '../containers/auth-ensure-user';
@@ -6,7 +7,9 @@ import AuthEnsureUser from '../containers/auth-ensure-user';
 const Profile = ({ username, email }) => (
   <AuthEnsureUser>
     <div className="profile">
-      <Helmet title="Profile" />
+      <Helmet>
+        <title>Profile</title>
+      </Helmet>
       <H1>Profile</H1>
       {username && <h3>@{username}</h3>}
       <p>{email}</p>

@@ -1,10 +1,13 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import H1 from '/client/ui/h1';
 
 const VerifyEmail = ({ error, success, successPath }) => (
   <div className="verify-email">
-    <Helmet title="Verify email" />
+    <Helmet>
+      <title>Verify email</title>
+    </Helmet>
     <H1>Verify email</H1>
     {/* Loading... */}
     {!success && !error && <p>Verifying your email, this will take just a moment...</p>}

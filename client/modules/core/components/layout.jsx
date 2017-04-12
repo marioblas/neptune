@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import App from './app';
 import DocHead from './dochead';
 import Header from './header';

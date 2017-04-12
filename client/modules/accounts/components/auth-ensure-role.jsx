@@ -1,6 +1,7 @@
 /* eslint max-len: 0 */
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Login from '../containers/login';
 
 const AuthEnsureRole = ({ loggingIn, loggedIn, allowed, children, silent, loggingInComp, notLoggedInComp, notAllowedComp }) => {

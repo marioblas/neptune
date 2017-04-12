@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import H1 from '/client/ui/h1';
 import AuthEnsureGuest from '../containers/auth-ensure-guest';
@@ -29,7 +30,9 @@ class SignUp extends Component {
     return (
       <AuthEnsureGuest>
         <div className="sign-up">
-          <Helmet title="Sign up" />
+          <Helmet>
+            <title>Sign up</title>
+          </Helmet>
           <H1>Sign up</H1>
           {/* Error */}
           {error && <p>{error}</p>}

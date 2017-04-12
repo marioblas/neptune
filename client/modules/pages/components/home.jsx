@@ -4,7 +4,9 @@ import H1 from '/client/ui/h1';
 
 const Home = () => (
   <div className="home">
-    <Helmet title="Home" />
+    <Helmet>
+      <title>Home</title>
+    </Helmet>
     <H1>Welcome to Neptune</H1>
   </div>
 );
