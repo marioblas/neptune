@@ -9,8 +9,8 @@ export const composer = ({ context }, onData) => {
   if (user) {
     const { username, emails } = user;
     Object.assign(data, { username, email: emails[0].address });
+    onData(null, data);
   }
-  onData(null, data);
 };
 
 export const depsMapper = context => ({
