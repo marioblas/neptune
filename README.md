@@ -32,19 +32,6 @@ Don't push keys in your code, push them in settings file.
 
 For security purposes `settings-production.json` is *ignored* to prevent from being stored into version control.
 
-An example of production file with Kadira APM & Kadira Debug keys:
-```json
-{
-  "kadira": {
-    "appId": "<appId>",
-    "appSecret": "<appSecret>",
-    "debug": {
-      "authKey": "<authKey>"
-    }
-  }
-}
-```
-
 > Read [this article](http://joshowens.me/environment-settings-and-security-with-meteor-js) for more info about Meteor settings.
 
 ## License
