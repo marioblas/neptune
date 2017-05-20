@@ -12,7 +12,10 @@ const StyledFooter = styled.footer`
 const Footer = ({ currentYear }) => (
   <StyledFooter>
     <div>Neptune &copy; {currentYear}</div>
-    <div>built with ⌨️ by <A href="https://github.com/marioblas" target="_blank" rel="noopener noreferrer">@marioblas</A></div>
+    <div>
+      built with <span role="img" aria-label="keyboard">⌨️</span> by&nbsp;
+      <A href="https://github.com/marioblas" target="_blank" rel="noopener noreferrer">@marioblas</A>
+    </div>
   </StyledFooter>
 );
 
