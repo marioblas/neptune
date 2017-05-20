@@ -34,5 +34,12 @@ For security purposes `settings-production.json` is *ignored* to prevent from be
 
 > Read [this article](http://joshowens.me/environment-settings-and-security-with-meteor-js) for more info about Meteor settings.
 
+## Deployment
+
+- **Now** (with [Meteor Now](https://github.com/jkrup/meteor-now))
+- **Heroku** (with [Meteor Buildpack Horse](https://github.com/AdmitHub/meteor-buildpack-horse))
+- [**Galaxy**](https://www.meteor.com/hosting)
+- **Anywhere** (with [Meteor Up](https://github.com/zodern/meteor-up))
+
 ## License
 MIT © [marioblas](https://github.com/marioblas)
