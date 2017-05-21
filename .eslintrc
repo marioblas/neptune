@@ -8,6 +8,11 @@
     "meteor"
   ],
 
+  "env": {
+    "browser": true,
+    "node": true
+  },
+
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true

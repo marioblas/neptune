@@ -1,20 +1,8 @@
-/* eslint no-param-reassign: 0 */
-
 import React from 'react';
-import { mount } from 'react-mounter';
+import { Route } from 'react-router-dom';
 
-import MainLayout from './components/layout';
-import NotFound from './components/not-found';
-
-export default function (injectDeps, { FlowRouter }) {
-  const MainLayoutCtx = injectDeps(MainLayout);
-
-  FlowRouter.notFound = {
-    name: 'notFound',
-    action() {
-      mount(MainLayoutCtx, {
-        content: () => (<NotFound />),
-      });
-    },
-  };
+export default function () {
+  return [
+    <Route exact path="/" component={() => <h1>Hello world!</h1>} />,
+  ];
 }
