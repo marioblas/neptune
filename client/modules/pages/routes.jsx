@@ -1,32 +1,11 @@
 import React from 'react';
-import { mount } from 'react-mounter';
+import RouteLayout from '/client/modules/core/components/route-layout';
+import Home from './components/home';
+// import Secrets from './components/secrets';
 
-import MainLayout from '/client/modules/core/components/layout';
-import Home from './components/home.jsx';
-import Secrets from './components/secrets';
-
-export default function (injectDeps, { FlowRouter, GoogleAnalytics }) {
-  const MainLayoutCtx = injectDeps(MainLayout);
-
-  const publicRoutes = FlowRouter.group({
-    triggersEnter: [GoogleAnalytics.pageView],
-  });
-
-  publicRoutes.route('/', {
-    name: 'home',
-    action() {
-      mount(MainLayoutCtx, {
-        content: () => (<Home />),
-      });
-    },
-  });
-
-  FlowRouter.route('/secrets', {
-    name: 'secrets',
-    action() {
-      mount(MainLayoutCtx, {
-        content: () => (<Secrets />),
-      });
-    },
-  });
+export default function () {
+  return [
+    <RouteLayout exact path="/home" component={Home} />,
+    // <RouteLayout exact path="/secrets" component={Secrets} />,
+  ];
 }

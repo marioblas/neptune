@@ -1,32 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from 'styled-components';
-import theme from '/client/configs/theme';
 import App from './app';
 import DocHead from './dochead';
 import Header from './header';
 import MainContent from './main-content';
 import Footer from '../containers/footer';
 
-const Layout = ({ content }) => (
-  <ThemeProvider theme={theme}>
-    <App>
-      <DocHead />
-      <Header />
-      <MainContent>
-        {content()}
-      </MainContent>
-      <Footer />
-    </App>
-  </ThemeProvider>
+const Layout = ({ children }) => (
+  <App>
+    <DocHead />
+    <Header />
+    <MainContent>
+      {children}
+    </MainContent>
+    <Footer />
+  </App>
 );
 
 Layout.propTypes = {
-  content: PropTypes.func,
+  children: PropTypes.node.isRequired,
 };
 
-Layout.defaultProps = {
-  content: () => null,
-};
+Layout.defaultProps = {};
 
 export default Layout;

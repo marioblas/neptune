@@ -11,8 +11,8 @@ import 'normalize.css/normalize.css';
 import createApp from './app';
 import injectReducers from './configs/store';
 
-import applyGlobalStyles from './configs/global-styles';
 import initGoogleAnalytics from './configs/google-analytics';
+import applyGlobalStyles from './configs/global-styles';
 import theme from './configs/theme';
 
 import NotFound from './modules/core/components/not-found';
@@ -20,7 +20,7 @@ import NotFound from './modules/core/components/not-found';
 // Modules
 import coreModule from './modules/core';
 // import accountsModule from './modules/accounts';
-// import pagesModule from './modules/pages';
+import pagesModule from './modules/pages';
 
 // Configs
 applyGlobalStyles();
@@ -30,7 +30,7 @@ initGoogleAnalytics();
 const app = createApp();
 app.loadModule(coreModule);
 // app.loadModule(accountsModule);
-// app.loadModule(pagesModule);
+app.loadModule(pagesModule);
 
 // Init App
 app.init();
