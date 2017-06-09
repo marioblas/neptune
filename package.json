@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "eslint ./client ./lib ./server --ext .js --ext .jsx",
     "lint:fix": "npm run lint -- --fix",
-    "start": "meteor run --settings settings-development.json"
+    "start": "meteor run --settings settings-development.json",
+    "start:prod": "npm run start -- --production"
   },
   "pre-commit": [
     "lint"
