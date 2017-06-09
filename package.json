@@ -6,7 +6,8 @@
     "lint": "eslint ./client ./lib ./server --ext .js --ext .jsx",
     "lint:fix": "npm run lint -- --fix",
     "precommit": "lint-staged",
-    "start": "meteor run --settings settings-development.json"
+    "start": "meteor run --settings settings-development.json",
+    "start:prod": "npm run start -- --production"
   },
   "lint-staged": {
     "*.{js,jsx}": [
