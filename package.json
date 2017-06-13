@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Neptune",
   "scripts": {
-    "lint": "eslint ./client ./lib ./server --ext .js --ext .jsx",
+    "lint": "eslint ./client ./lib ./server --ext .js,.jsx",
     "lint:fix": "npm run lint -- --fix",
     "precommit": "lint-staged",
     "start": "meteor run --settings settings-development.json",
