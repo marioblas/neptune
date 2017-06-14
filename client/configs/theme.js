@@ -17,6 +17,16 @@ const theme = {
     warning: '#f0ad4e',
     error: '#e74c3c',
   },
+
+  spacing: {
+    xxs: 8,
+    xs: 16,
+    sm: 24,
+    md: 32,
+    lg: 40,
+    xl: 48,
+    xxl: 56,
+  },
 };
 
 export default theme;
