@@ -4,7 +4,7 @@
 [![Dependency Status](https://david-dm.org/marioblas/neptune.svg?style=flat-square)](https://david-dm.org/marioblas/neptune)
 [![devDependency Status](https://david-dm.org/marioblas/neptune/dev-status.svg?style=flat-square)](https://david-dm.org/marioblas/neptune?type=dev)
 
-Another Meteor boilerplate with [Mantra](https://github.com/kadirahq/mantra), [React](https://github.com/facebook/react), [Styled Components](https://github.com/styled-components/styled-components) & more...
+Another Meteor boilerplate with [React](https://github.com/facebook/react), [Redux](https://github.com/reactjs/redux), [Styled Components](https://github.com/styled-components/styled-components) & more...
 
 ## Quick start
 
