@@ -19,7 +19,6 @@ import NotFound from './modules/core/components/not-found';
 
 // Modules
 import coreModule from './modules/core';
-// import accountsModule from './modules/accounts';
 import pagesModule from './modules/pages';
 
 // Configs
@@ -29,7 +28,6 @@ initGoogleAnalytics();
 // Create App
 const app = createApp();
 app.loadModule(coreModule);
-// app.loadModule(accountsModule);
 app.loadModule(pagesModule);
 
 // Init App

@@ -1,19 +1,11 @@
-import { useDeps, composeWithTracker, composeAll } from 'mantra-core';
-
+import { createContainer } from 'meteor/react-meteor-data';
 import Footer from '../components/footer';
 
-export const composer = ({ context }, onData) => {
+const FooterContainer = createContainer(() => {
   const currentDate = new Date();
-  onData(null, {
+  return {
     currentYear: currentDate.getFullYear(),
-  });
-};
+  };
+}, Footer);
 
-export const depsMapper = context => ({
-  context: () => context,
-});
-
-export default composeAll(
-  composeWithTracker(composer),
-  useDeps(depsMapper),
-)(Footer);
+export default FooterContainer;
