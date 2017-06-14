@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import H1 from '/client/ui/H1';
 
 const Home = () => (
-  <div className="home">
+  <div>
     <Helmet>
       <title>Home</title>
     </Helmet>

@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import H1 from '/client/ui/H1';
 
 const NotFound = () => (
-  <div className="not-found">
+  <div>
     <Helmet>
       <title>Not found</title>
     </Helmet>
