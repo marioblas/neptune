@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import A from '/client/ui/a';
+import A from '/client/ui/A';
 
 const StyledFooter = styled.footer`
   display: flex;

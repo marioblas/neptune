@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import H1 from '/client/ui/h1';
+import H1 from '/client/ui/H1';
 
 const Home = () => (
   <div className="home">
