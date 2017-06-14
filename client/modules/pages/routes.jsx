@@ -1,5 +1,5 @@
 import React from 'react';
-import RouteLayout from '/client/modules/core/components/route-layout';
+import RouteLayout from '/client/modules/core/components/RouteLayout';
 import Home from './components/Home';
 
 export default function () {

@@ -11,11 +11,11 @@ import 'normalize.css/normalize.css';
 import createApp from './app';
 import injectReducers from './configs/store';
 
-import initGoogleAnalytics from './configs/google-analytics';
-import applyGlobalStyles from './configs/global-styles';
+import initGoogleAnalytics from './configs/googleAnalytics';
+import applyGlobalStyles from './configs/globalStyles';
 import theme from './configs/theme';
 
-import NotFound from './modules/core/components/not-found';
+import NotFound from './modules/core/components/NotFound';
 
 // Modules
 import coreModule from './modules/core';

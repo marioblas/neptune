@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import App from './app';
-import DocHead from './dochead';
-import Header from './header';
-import MainContent from './main-content';
-import Footer from '../containers/footer';
+import App from './App';
+import DocHead from './DocHead';
+import Header from './Header';
+import MainContent from './MainContent';
+import Footer from '../containers/Footer';
 
 const Layout = ({ children }) => (
   <App>

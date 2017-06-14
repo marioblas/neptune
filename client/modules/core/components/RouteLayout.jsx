@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
-import Layout from './layout';
+import Layout from './Layout';
 
 const RouteLayout = ({ component: Component, ...rest }) => (
   <Route
