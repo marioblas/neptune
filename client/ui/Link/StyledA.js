@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { tint } from 'polished';
 
-const A = styled.a`
+const StyledA = styled.a`
   color: ${props => props.theme.color.alternate};
   text-decoration: none;
 
@@ -10,4 +10,4 @@ const A = styled.a`
   }
 `;
 
-export default A;
+export default StyledA;

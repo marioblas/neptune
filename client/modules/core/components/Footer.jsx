@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import A from '/client/ui/A';
+import Link from '/client/ui/Link';
 
 const StyledFooter = styled.footer`
   display: flex;
@@ -14,7 +14,7 @@ const Footer = ({ currentYear }) => (
     <div>Neptune &copy; {currentYear}</div>
     <div>
       built with <span role="img" aria-label="keyboard">⌨️</span> by&nbsp;
-      <A href="https://github.com/marioblas" target="_blank" rel="noopener noreferrer">@marioblas</A>
+      <Link href="https://github.com/marioblas">@marioblas</Link>
     </div>
   </StyledFooter>
 );

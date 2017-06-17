@@ -18,7 +18,7 @@ const theme = {
     error: '#e74c3c',
   },
 
-  // Spacing in px
+  // Spacing (px)
   spacing: {
     xxs: 8,
     xs: 16,
@@ -29,7 +29,7 @@ const theme = {
     xxl: 56,
   },
 
-  // Timing in seconds
+  // Timing (seconds)
   timing: {
     t1: 0.1,
     t2: 0.2,
