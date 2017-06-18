@@ -1,13 +1,13 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import H1 from '/client/ui/H1';
+import Heading from '/client/ui/Heading';
 
 const Home = () => (
   <div>
     <Helmet>
       <title>Home</title>
     </Helmet>
-    <H1>Welcome to Neptune</H1>
+    <Heading>Welcome to Neptune</Heading>
   </div>
 );
 

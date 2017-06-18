@@ -9,7 +9,6 @@ const theme = {
     white: '#fafafa',
     black: '#0a0a0a',
     gray: '#cacaca',
-    darkBlue: '#000077',
 
     // Contextual
     success: '#4caf50',
@@ -18,18 +17,18 @@ const theme = {
     error: '#e74c3c',
   },
 
-  // Spacing in px
+  // Spacing (rem)
   spacing: {
-    xxs: 8,
-    xs: 16,
-    sm: 24,
-    md: 32,
-    lg: 40,
-    xl: 48,
-    xxl: 56,
+    xxs: 0.25,
+    xs: 0.5,
+    sm: 1,
+    md: 1.5,
+    lg: 2,
+    xl: 2.5,
+    xxl: 3,
   },
 
-  // Timing in seconds
+  // Timing (seconds)
   timing: {
     t1: 0.1,
     t2: 0.2,

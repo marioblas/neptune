@@ -1,13 +1,13 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import H1 from '/client/ui/H1';
+import Heading from '/client/ui/Heading';
 
 const NotFound = () => (
   <div>
     <Helmet>
       <title>Not found</title>
     </Helmet>
-    <H1>Page not found</H1>
+    <Heading>Page not found</Heading>
   </div>
 );
 
